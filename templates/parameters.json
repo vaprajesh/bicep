@@ -1,0 +1,74 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "westus2"
+        },
+        "extendedLocation": {
+            "value": {}
+        },
+        "virtualNetworkName": {
+            "value": "TESTVNET"
+        },
+        "resourceGroup": {
+            "value": "TEMP"
+        },
+        "addressSpaces": {
+            "value": [
+                "172.16.0.0/16"
+            ]
+        },
+        "ipv6Enabled": {
+            "value": false
+        },
+        "subnetCount": {
+            "value": 2
+        },
+        "subnet0_name": {
+            "value": "172.16.1.0"
+        },
+        "subnet0_addressRange": {
+            "value": "172.16.1.0/24"
+        },
+        "subnet0_serviceEndpoints": {
+            "value": [
+                "Microsoft.AzureActiveDirectory",
+                "Microsoft.KeyVault",
+                "Microsoft.Storage"
+            ]
+        },
+        "subnet1_name": {
+            "value": "172.16.2.0"
+        },
+        "subnet1_addressRange": {
+            "value": "172.16.2.0/24"
+        },
+        "subnet1_serviceEndpoints": {
+            "value": [
+                "Microsoft.AzureActiveDirectory",
+                "Microsoft.KeyVault",
+                "Microsoft.Storage",
+                "Microsoft.Web"
+            ]
+        },
+        "ddosProtectionPlanEnabled": {
+            "value": false
+        },
+        "firewallEnabled": {
+            "value": true
+        },
+        "bastionEnabled": {
+            "value": false
+        },
+        "firewallName": {
+            "value": "hnis-dev-westus3-fw"
+        },
+        "firewallSubnetAddressSpace": {
+            "value": "172.16.0.0/24"
+        },
+        "publicIpAddress": {
+            "value": "hnis-dev-westus3-pip"
+        }
+    }
+}
